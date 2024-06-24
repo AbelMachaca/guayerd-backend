@@ -1,7 +1,12 @@
 const express = require('express');
 const connectDB = require('./config/salesforce');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.use(cors({
+    origin: 'http://localhost:5173'
+  }));
 
 // Init Middleware
 app.use(express.json());
