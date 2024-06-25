@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Define Routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/users', require('./routes/user'));
 
 app.get('/', (req, res) => {
     res.send('Hello, Guayerd Backend!');
